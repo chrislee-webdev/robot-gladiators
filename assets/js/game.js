@@ -1,7 +1,14 @@
 
 // fight function (now with parameter for enemy's name)
 var fight = function(enemy) {
+  //keep track of who goes first
+  var isPlayerTurn = true;
+  if (Math.random() > 0.5) {
+    isPlayerTurn = false;
+  }
+
   while (playerHealth > 0 && enemy.health > 0) {
+    if (isPlayerTurn)
     // ask player if they'd like to fight or run
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
