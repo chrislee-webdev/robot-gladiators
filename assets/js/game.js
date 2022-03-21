@@ -5,6 +5,12 @@ var fight = function(enemy) {
     // ask player if they'd like to fight or run
     var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
 
+    // conditional recursive function call
+    if (!promptFight) {
+      window.alert("You need to provide a vaild answer! Please try again.");
+      return fightOrSkip;
+    }
+
     // if player picks "skip" confirm and then stop the loop
     if (promptFight === 'skip' || promptFight === 'SKIP') {
       // confirm player wants to skip
